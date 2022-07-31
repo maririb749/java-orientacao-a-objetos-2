@@ -1,4 +1,4 @@
-package Program;
+package application;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import entities.Rectangle;
 import entities.Shape;
 import entities.enums.Color;
 
-public class application {
+public class Program {
 
 	public static void main(String[] args) {
 
