@@ -1,14 +1,11 @@
 package entities;
 
 import entities.enums.Color;
+import model.entities.AbstractShape;
 
-public class Circle extends Shape {
+public class Circle extends AbstractShape {
 
 	private Double radius;
-
-	public Circle() {
-		super();
-	}
 
 	public Circle(Color color, Double radius) {
 		super(color);
