@@ -11,6 +11,10 @@ public class Curingas_delimitados {
 
 	public static void main(String[] args) {
 
+		/*
+		 * Vamos fazer um método para retornar a soma das áreas de uma lista de figuras.
+		 */
+
 		List<Shape> myShapes = new ArrayList<>();
 		myShapes.add(new Rectangle1(3.0, 2.0));
 		myShapes.add(new Circle1(2.0));
