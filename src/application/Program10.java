@@ -10,7 +10,7 @@ public class Program10 {
 
 		/*
 		 * Vamos fazer um método que copia os elementos de uma lista para uma outra
-		 * lista que pode ser mais genérica que a primeira
+		 * lista que pode ser mais genérica que a primeira.
 		 */
 
 		List<Integer> myInts = Arrays.asList(1, 2, 3, 4);
