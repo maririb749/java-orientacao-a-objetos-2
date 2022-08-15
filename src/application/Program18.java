@@ -23,7 +23,7 @@ public class Program18 {
 	        list.add(new Product5("Tablet", 350.50));
 	        list.add(new Product5("HD Case", 80.00));
 	        
-	        list.removeIf(Product5:: staticProductPredicate);
+	        list.removeIf(Product5 :: nonstaticProductPredicate);
 	        
 	        for (Product5 p : list) {
 	        	System.out.println(p);
