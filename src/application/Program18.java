@@ -3,19 +3,18 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import entities.Product5;
-import util.PriceUpdate;
+import util.UpperCaseName;
 
 public class Program18 {
 
 	public static void main(String[] args) {
 
 		/*
-		 * Fazer um programa que, a partir de uma lista de produtos, aumente o preço dos
-		 * produtos em 10%.
+		 * Fazer um programa que, a partir de uma lista de produtos, gere uma nova lista
+		 * contendo os nomes dos produtos em caixa alta.
 		 */
 		Locale.setDefault(Locale.US);
 		List<Product5> list = new ArrayList<>();
@@ -25,11 +24,9 @@ public class Program18 {
 		list.add(new Product5("Tablet", 350.50));
 		list.add(new Product5("HD Case", 80.00));
 
-		double factor = 1.1;
-
-		list.forEach(p -> p.setPrice(p.getPrice() * factor));
-
-		list.forEach(System.out::println);
+		List<String> name = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
+		
+		name.forEach(System.out::println);
 
 	}
 
