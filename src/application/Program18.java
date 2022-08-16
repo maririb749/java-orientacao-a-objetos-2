@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
-
+ 
 import entities.Product5;
 
 public class Program18 {
@@ -23,7 +23,7 @@ public class Program18 {
 		list.add(new Product5("Tablet", 350.50));
 		list.add(new Product5("HD Case", 80.00));
 
-		List<String> name = list.stream().map(Product5::staticUpperCaseName).collect(Collectors.toList());
+		List<String> name = list.stream().map(Product5::nonstaticUpperCaseName).collect(Collectors.toList());
 		
 		name.forEach(System.out::println);
 
