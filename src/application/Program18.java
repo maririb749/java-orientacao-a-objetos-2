@@ -24,7 +24,7 @@ public class Program18 {
 		list.add(new Product5("Tablet", 350.50));
 		list.add(new Product5("HD Case", 80.00));
 
-		list.forEach(Product5 :: staticPriceUpdate);
+		list.forEach(Product5 :: nonstaticPriceUpdate);
 
 		list.forEach(System.out::println);
 
