@@ -3,29 +3,27 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.stream.Collectors;
 
 import entities.Product5;
+import model.entities.ProductService;
 
 public class Program18 {
 
 	public static void main(String[] args) {
 
-		/*
-		 * Fazer um programa que, a partir de uma lista de produtos, gere uma nova lista
-		 * contendo os nomes dos produtos em caixa alta.
-		 */
 		Locale.setDefault(Locale.US);
 		List<Product5> list = new ArrayList<>();
 
 		list.add(new Product5("TV", 900.00));
 		list.add(new Product5("Mouse", 50.00));
 		list.add(new Product5("Tablet", 350.50));
-		list.add(new Product5("HD Case", 80.00));
+		list.add(new Product5("HD Case", 80.90));
 
-		List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
+		ProductService ps = new ProductService();
 
-		names.forEach(System.out::println);
+		double sum = ps.filteredSum(list, p -> p.getPrice() < 100.0);
+
+		System.out.println("Sum = " + String.format("%.2f", sum));
 
 	}
 

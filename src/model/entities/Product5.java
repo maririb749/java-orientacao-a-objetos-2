@@ -1,10 +1,10 @@
-package entities;
+package model.entities;
 
 public class Product5 {
-
+	
 	private String name;
 	private Double price;
-
+	
 	public Product5(String name, Double price) {
 		this.name = name;
 		this.price = price;
@@ -21,14 +21,14 @@ public class Product5 {
 	public Double getPrice() {
 		return price;
 	}
-
+ 
 	public void setPrice(Double price) {
 		this.price = price;
 	}
 
 	@Override
 	public String toString() {
-		return name + " , " + String.format("%.2f", price);
+		return name + ", " + String.format("%.2f", price);
 	}
 
 }
